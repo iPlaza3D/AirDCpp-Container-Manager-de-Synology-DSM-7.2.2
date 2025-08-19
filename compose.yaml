@@ -10,8 +10,9 @@ services:
             - PUID=1026
             - PGID=101
         volumes:
-            - ./config:/.airdcpp
-            - ./downloads:/Downloads
-            - ./share:/Share
-            - /volume2/Ordenadores/Sistemas Linux:/Sistemas Linux
+            - ./config:/.airdcpp #crear carpeta previamente dentro de /docker/pihole/CARPETA#
+            - ./downloads:/Downloads #crear carpeta previamente dentro de /docker/pihole/CARPETA#
+            - ./share:/Share #crear carpeta previamente dentro de /docker/pihole/CARPETA#
+            - /volume2/Ordenadores/Sistemas Linux:/Sistemas Linux #carpeta añadida para sharing#
+
         image: gangefors/airdcpp-webclient:latest
