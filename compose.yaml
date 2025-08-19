@@ -7,8 +7,8 @@ services:
             - 21248:21248/udp
             - 21249:21249
         environment:
-            - PUID=1026
-            - PGID=101
+            - PUID=1026 #comprobar cada usuaio el suyo propio#
+            - PGID=101 #comprobar cada usuaio el suyo propio#
         volumes:
             - ./config:/.airdcpp #crear carpeta previamente dentro de /docker/pihole/CARPETA#
             - ./downloads:/Downloads #crear carpeta previamente dentro de /docker/pihole/CARPETA#
@@ -16,3 +16,4 @@ services:
             - /volume2/Ordenadores/Sistemas Linux:/Sistemas Linux #carpeta añadida para sharing#
 
         image: gangefors/airdcpp-webclient:latest
+
