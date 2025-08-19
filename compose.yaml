@@ -1,0 +1,17 @@
+services:
+    airdcpp-webclient:
+        container_name: Airdcpp
+        ports:
+            - 5600:5600
+            - 21248:21248
+            - 21248:21248/udp
+            - 21249:21249
+        environment:
+            - PUID=1026
+            - PGID=101
+        volumes:
+            - ./config:/.airdcpp
+            - ./downloads:/Downloads
+            - ./share:/Share
+            - /volume2/Ordenadores/Sistemas Linux:/Sistemas Linux
+        image: gangefors/airdcpp-webclient:latest
